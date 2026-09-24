@@ -17,8 +17,8 @@ android {
         applicationId = "com.example.dailyshoppinglist"
         minSdk = 24
         targetSdk = 35
-        versionCode = 3
-        versionName = "2.0.1"
+        versionCode = 4
+        versionName = "2.0.2"
         resourceConfigurations += listOf("fa", "en")
         vectorDrawables { useSupportLibrary = true }
     }

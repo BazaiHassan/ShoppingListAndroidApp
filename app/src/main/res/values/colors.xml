@@ -2,6 +2,5 @@
 <resources>
     <color name="window_background">#F2F2F7</color>
     <color name="accent">#007AFF</color>
-    <color name="launcher_start">#34AADC</color>
-    <color name="launcher_end">#007AFF</color>
+    <color name="ic_launcher_background">#FFFFFF</color>
 </resources>
