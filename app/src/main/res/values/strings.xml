@@ -1,3 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">لیست خرید</string>
+
+    <!-- Tabs -->
+    <string name="tab_list">لیست</string>
+    <string name="tab_history">تاریخچه</string>
+    <string name="tab_settings">تنظیمات</string>
+
+    <!-- List -->
+    <string name="list_title">لیست خرید</string>
+    <string name="add_item_hint">افزودن آیتم…</string>
+    <string name="add_item">افزودن</string>
+    <string name="section_to_buy">برای خرید</string>
+    <string name="section_in_cart">در سبد</string>
+    <string name="progress_title">%1$s از %2$s در سبد</string>
+    <plurals name="progress_remaining">
+        <item quantity="one">%s آیتم باقی مانده</item>
+        <item quantity="other">%s آیتم باقی مانده</item>
+    </plurals>
+    <string name="progress_done">همه چیز خریده شد! 🎉</string>
+    <string name="finish_shopping">پایان خرید</string>
+    <string name="empty_list_title">لیست خرید خالی است</string>
+    <string name="empty_list_message">آیتم‌ها را از کادر پایین صفحه اضافه کنید.\nنکته: با نوشتن «۲ نان» تعداد هم ثبت می‌شود.</string>
+    <string name="quick_add">افزودن سریع از خریدهای قبلی</string>
+    <string name="tip_gestures">برای ویرایش روی آیتم بزنید و برای حذف، آن را به کنار بکشید.</string>
+    <string name="mark_bought">علامت‌گذاری به عنوان خریده‌شده</string>
+    <string name="mark_not_bought">برگرداندن به لیست</string>
+
+    <!-- Menu -->
+    <string name="menu_share">اشتراک‌گذاری لیست</string>
+    <string name="menu_group_by_category">دسته‌بندی آیتم‌ها</string>
+    <string name="menu_clear_checked">حذف آیتم‌های داخل سبد</string>
+    <string name="menu_clear_all">پاک کردن کل لیست</string>
+    <string name="more_options">گزینه‌های بیشتر</string>
+    <string name="share_title">لیست خرید من</string>
+    <string name="share_via">اشتراک‌گذاری با…</string>
+
+    <!-- Feedback -->
+    <string name="snack_item_deleted">«%1$s» حذف شد</string>
+    <plurals name="snack_cleared">
+        <item quantity="one">%s آیتم حذف شد</item>
+        <item quantity="other">%s آیتم حذف شد</item>
+    </plurals>
+    <plurals name="snack_trip_saved">
+        <item quantity="one">خرید با %s آیتم در تاریخچه ذخیره شد</item>
+        <item quantity="other">خرید با %s آیتم در تاریخچه ذخیره شد</item>
+    </plurals>
+    <string name="snack_view">مشاهده</string>
+    <string name="undo">واگرد</string>
+    <string name="added_to_list">«%1$s» به لیست اضافه شد</string>
+    <plurals name="added_all">
+        <item quantity="one">%s آیتم به لیست اضافه شد</item>
+        <item quantity="other">%s آیتم به لیست اضافه شد</item>
+    </plurals>
+
+    <!-- Common -->
+    <string name="confirm_clear_all_title">کل لیست پاک شود؟</string>
+    <string name="confirm_clear_all_message">همه آیتم‌های لیست حذف می‌شوند.</string>
+    <string name="clear">پاک کردن</string>
+    <string name="cancel">انصراف</string>
+    <string name="delete">حذف</string>
+    <string name="save">ذخیره</string>
+    <string name="back">بازگشت</string>
+
+    <!-- Editor -->
+    <string name="edit_item">ویرایش آیتم</string>
+    <string name="item_name">نام آیتم</string>
+    <string name="item_note">یادداشت (اختیاری)</string>
+    <string name="quantity">تعداد</string>
+    <string name="category">دسته‌بندی</string>
+    <string name="delete_item">حذف آیتم</string>
+    <string name="decrease">کم کردن</string>
+    <string name="increase">زیاد کردن</string>
+
+    <!-- Categories -->
+    <string name="cat_produce">میوه و سبزی</string>
+    <string name="cat_dairy">لبنیات و تخم‌مرغ</string>
+    <string name="cat_bakery">نان و شیرینی</string>
+    <string name="cat_meat">گوشت و ماهی</string>
+    <string name="cat_pantry">خواربار</string>
+    <string name="cat_frozen">منجمد</string>
+    <string name="cat_drinks">نوشیدنی</string>
+    <string name="cat_snacks">تنقلات</string>
+    <string name="cat_household">شوینده و خانه</string>
+    <string name="cat_personal">بهداشتی</string>
+    <string name="cat_other">سایر</string>
+
+    <!-- History -->
+    <string name="history_title">تاریخچه خرید</string>
+    <string name="history_search">جستجو در خریدها</string>
+    <string name="frequent_title">پرتکرارها</string>
+    <string name="history_empty_title">هنوز خریدی ثبت نشده</string>
+    <string name="history_empty_message">وقتی خریدتان تمام شد، روی «پایان خرید» بزنید تا اینجا ذخیره شود.</string>
+    <string name="history_no_results">نتیجه‌ای پیدا نشد</string>
+    <plurals name="trip_items">
+        <item quantity="one">%s آیتم</item>
+        <item quantity="other">%s آیتم</item>
+    </plurals>
+    <string name="trip_items_header">آیتم‌های خریده‌شده</string>
+    <string name="add_all_to_list">افزودن همه به لیست</string>
+    <string name="add_to_list">افزودن به لیست</string>
+    <string name="delete_trip">حذف این خرید</string>
+    <string name="confirm_delete_trip_title">این خرید حذف شود؟</string>
+    <string name="confirm_delete_trip_message">این خرید برای همیشه از تاریخچه حذف می‌شود.</string>
+    <string name="select_trip">یک خرید را برای دیدن جزئیات انتخاب کنید.</string>
+
+    <!-- Settings -->
+    <string name="settings_title">تنظیمات</string>
+    <string name="appearance">ظاهر</string>
+    <string name="theme">پوسته</string>
+    <string name="theme_system">خودکار</string>
+    <string name="theme_light">روشن</string>
+    <string name="theme_dark">تیره</string>
+    <string name="accent_color">رنگ اصلی</string>
+    <string name="accent_blue">آبی</string>
+    <string name="accent_indigo">نیلی</string>
+    <string name="accent_purple">بنفش</string>
+    <string name="accent_pink">صورتی</string>
+    <string name="accent_red">قرمز</string>
+    <string name="accent_orange">نارنجی</string>
+    <string name="accent_green">سبز</string>
+    <string name="accent_teal">فیروزه‌ای</string>
+    <string name="language">زبان</string>
+    <string name="language_system">پیش‌فرض سیستم</string>
+    <string name="general">عمومی</string>
+    <string name="haptics">بازخورد لمسی</string>
+    <string name="group_by_category_footer">با فعال بودن دسته‌بندی، آیتم‌ها بر اساس نوع (میوه، لبنیات، …) مرتب می‌شوند.</string>
+    <string name="data">داده‌ها</string>
+    <string name="clear_history">پاک کردن تاریخچه</string>
+    <string name="confirm_clear_history_title">کل تاریخچه پاک شود؟</string>
+    <string name="confirm_clear_history_message">همه خریدهای ثبت‌شده و پیشنهادهای مبتنی بر آن‌ها حذف می‌شوند.</string>
+    <string name="about">درباره</string>
+    <string name="version">نسخه</string>
+    <string name="about_footer">ساخته‌شده با ❤️ برای خریدی ساده‌تر</string>
 </resources>
