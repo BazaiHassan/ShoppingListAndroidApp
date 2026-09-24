@@ -6,7 +6,8 @@ plugins {
 }
 
 // Release signing is provided by CI through environment variables. When they are
-// absent (local builds, forks) the release build falls back to the debug key.
+// absent, release builds use the committed keystore in app/keystore so every build
+// is signed with the same key and installs as an update over the previous one.
 val releaseKeystore: String? = System.getenv("SIGNING_KEYSTORE_PATH")?.takeIf { it.isNotBlank() }
 
 android {
@@ -17,13 +18,19 @@ android {
         applicationId = "com.example.dailyshoppinglist"
         minSdk = 24
         targetSdk = 35
-        versionCode = 4
-        versionName = "2.0.2"
+        versionCode = 5
+        versionName = "2.0.3"
         resourceConfigurations += listOf("fa", "en")
         vectorDrawables { useSupportLibrary = true }
     }
 
     signingConfigs {
+        getByName("debug") {
+            storeFile = file("keystore/debug.jks")
+            storePassword = "android"
+            keyAlias = "androiddebugkey"
+            keyPassword = "android"
+        }
         create("release") {
             if (releaseKeystore != null) {
                 storeFile = file(releaseKeystore)

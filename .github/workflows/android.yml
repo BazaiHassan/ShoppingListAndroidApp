@@ -40,7 +40,7 @@ jobs:
             echo "SIGNING_KEYSTORE_PATH=$RUNNER_TEMP/release.jks" >> "$GITHUB_ENV"
             echo "Release keystore configured."
           else
-            echo "::warning::SIGNING_KEYSTORE_BASE64 is not set; the APK is signed with a temporary debug key."
+            echo "SIGNING_KEYSTORE_BASE64 is not set; signing with the committed keystore (app/keystore/debug.jks)."
           fi
 
       - name: Unit tests

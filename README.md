@@ -51,4 +51,4 @@ To sign releases with your own key, add these repository secrets:
 - `SIGNING_KEYSTORE_BASE64`: the keystore, base64-encoded (`base64 -w0 release.jks`)
 - `SIGNING_STORE_PASSWORD`, `SIGNING_KEY_ALIAS`, `SIGNING_KEY_PASSWORD`
 
-Without them, the APK is signed with a temporary debug key. You'll need to uninstall such a build before installing one signed with a different key.
+Without them, the APK is signed with the committed keystore `app/keystore/debug.jks`. Every build then shares the same signature, so a new version installs as an update. That key is public, so for a store release use your own secret key. Note that switching keys requires uninstalling the app once.

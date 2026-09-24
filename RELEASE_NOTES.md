@@ -1,6 +1,6 @@
-## لیست خرید ۲.۰.۲
+## لیست خرید ۲.۰.۳
 
-- The original shopping-cart logo is back, as the launcher icon and on the splash screen.
-- Persian is the default language (since 2.0.1). English is available in Settings → Language.
+- Releases are now always signed with the same key, so **future versions install as an update** over this one.
+- ⚠️ This is the last time you need to uninstall: builds 2.0.0–2.0.2 were each signed with a temporary key, so uninstall them before installing 2.0.3.
 
-See the [2.0.0 release](https://github.com/BazaiHassan/ShoppingListAndroidApp/releases/tag/v2.0.0) for everything that's new in version 2.
+Also included: Persian as the default language (2.0.1) and the original logo (2.0.2).
