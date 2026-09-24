@@ -44,7 +44,7 @@ Requirements: JDK 17 and the Android SDK (API 35).
 ## Releases
 
 GitHub Actions (`.github/workflows/android.yml`) runs tests, lint and a release build on every push.
-Pushing a `v*` tag publishes a GitHub Release with the APK attached. The release notes come from `RELEASE_NOTES.md`.
+Pushing a `v*` tag (or a commit whose message contains `[release]`) publishes a GitHub Release with the APK attached. The release notes come from `RELEASE_NOTES.md`.
 
 To sign releases with your own key, add these repository secrets:
 
