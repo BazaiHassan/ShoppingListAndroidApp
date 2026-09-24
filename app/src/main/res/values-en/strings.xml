@@ -113,7 +113,6 @@
     <string name="accent_green">Green</string>
     <string name="accent_teal">Teal</string>
     <string name="language">Language</string>
-    <string name="language_system">System default</string>
     <string name="general">General</string>
     <string name="haptics">Haptic Feedback</string>
     <string name="group_by_category_footer">When grouping is on, items are sorted by type (produce, dairy, …).</string>

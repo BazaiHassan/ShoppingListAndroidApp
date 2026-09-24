@@ -18,21 +18,21 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
-enum class AppLanguage(val tag: String?) {
-    SYSTEM(null),
+/** App languages. Persian is the default whatever the device language is. */
+enum class AppLanguage(val tag: String) {
     PERSIAN("fa"),
     ENGLISH("en"),
     ;
 
+    fun activate() = AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(tag))
+
     companion object {
+        val DEFAULT = PERSIAN
+
         fun current(): AppLanguage {
             val locales = AppCompatDelegate.getApplicationLocales()
-            if (locales.isEmpty) return SYSTEM
-            return when (locales[0]?.language) {
-                "fa" -> PERSIAN
-                "en" -> ENGLISH
-                else -> SYSTEM
-            }
+            if (locales.isEmpty) return DEFAULT
+            return entries.firstOrNull { it.tag == locales[0]?.language } ?: DEFAULT
         }
     }
 }
@@ -51,10 +51,7 @@ class SettingsViewModel(
     fun clearHistory() = launch { repository.clearHistory() }
 
     /** Per-app language (stored by AppCompat; also shown in system settings on Android 13+). */
-    fun setLanguage(language: AppLanguage) {
-        val locales = language.tag?.let { LocaleListCompat.forLanguageTags(it) } ?: LocaleListCompat.getEmptyLocaleList()
-        AppCompatDelegate.setApplicationLocales(locales)
-    }
+    fun setLanguage(language: AppLanguage) = language.activate()
 
     private fun launch(block: suspend () -> Unit) {
         viewModelScope.launch { block() }

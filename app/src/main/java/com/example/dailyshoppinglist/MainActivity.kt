@@ -6,6 +6,7 @@ import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
 import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import androidx.compose.runtime.DisposableEffect
@@ -14,6 +15,7 @@ import androidx.compose.runtime.getValue
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.dailyshoppinglist.ui.ShoppingAppRoot
+import com.example.dailyshoppinglist.ui.settings.AppLanguage
 import com.example.dailyshoppinglist.ui.theme.ShoppingTheme
 import com.example.dailyshoppinglist.ui.theme.isDark
 
@@ -28,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         // Keep the splash until the theme is known, so there is no light/dark flash.
         splash.setKeepOnScreenCondition { !settingsLoaded }
         enableEdgeToEdge()
+        applyDefaultLanguage()
 
         val settingsFlow = (application as ShoppingApplication).container.settingsRepository.settings
         setContent {
@@ -48,5 +51,20 @@ class MainActivity : AppCompatActivity() {
                 ShoppingAppRoot(widthSizeClass = calculateWindowSizeClass(this).widthSizeClass)
             }
         }
+    }
+
+    /**
+     * Persian is the default language, even on devices set to English. It is applied once
+     * (first launch); after that the choice made in Settings is kept by AppCompat.
+     */
+    private fun applyDefaultLanguage() {
+        val prefs = getSharedPreferences("app", MODE_PRIVATE)
+        if (prefs.getBoolean(KEY_LANGUAGE_INITIALIZED, false)) return
+        prefs.edit().putBoolean(KEY_LANGUAGE_INITIALIZED, true).apply()
+        if (AppCompatDelegate.getApplicationLocales().isEmpty) AppLanguage.DEFAULT.activate()
+    }
+
+    private companion object {
+        const val KEY_LANGUAGE_INITIALIZED = "language_initialized"
     }
 }

@@ -139,7 +139,6 @@ fun SettingsScreen(viewModel: SettingsViewModel, insets: WindowInsets) {
                 item(key = "language") {
                     InsetGroup(header = stringResource(R.string.language)) {
                         val options = listOf(
-                            AppLanguage.SYSTEM to stringResource(R.string.language_system),
                             AppLanguage.PERSIAN to "فارسی",
                             AppLanguage.ENGLISH to "English",
                         )

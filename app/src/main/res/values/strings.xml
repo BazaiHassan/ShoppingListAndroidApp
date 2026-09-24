@@ -122,7 +122,6 @@
     <string name="accent_green">سبز</string>
     <string name="accent_teal">فیروزه‌ای</string>
     <string name="language">زبان</string>
-    <string name="language_system">پیش‌فرض سیستم</string>
     <string name="general">عمومی</string>
     <string name="haptics">بازخورد لمسی</string>
     <string name="group_by_category_footer">با فعال بودن دسته‌بندی، آیتم‌ها بر اساس نوع (میوه، لبنیات، …) مرتب می‌شوند.</string>

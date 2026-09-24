@@ -15,7 +15,7 @@ It uses an iOS-inspired design, supports several themes, adapts to every screen 
 | 🗂 **Categories** | Items are categorized automatically in Persian and English. You can turn on grouping by category. |
 | 🎨 **Themes** | Automatic, Light and Dark modes with 8 Apple system accent colors. |
 | 📱 **Responsive** | Tab bar on phones, a navigation rail and a two-pane history on tablets, foldables and landscape screens. Content width stays readable on large displays. |
-| 🌐 **Languages** | Persian (RTL, Solar Hijri dates, Persian digits) and English, with a per-app language switch. |
+| 🌐 **Languages** | Persian by default (RTL, Solar Hijri dates, Persian digits), with English available in Settings. |
 
 ## Tech stack
 
